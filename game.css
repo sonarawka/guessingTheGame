@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Russo+One&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    word-spacing:5px ;
+
+}
+
+#a{
+    text-align: right;
+    font-size: 20px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+}
+
+#b{
+    color: black;
+    background-color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 35px ;
+}
+
+#c{
+    position: relative;
+    text-align: center;
+    font-size:60px ;
+    top: 120px;
+    word-spacing: 20px;
+}
+
+#line{
+    position:absolute;
+    border: white 3px solid;
+    top: 300px;
+    width: 100%;
+    background-color: white;
+}
+
+#d{
+    font-size: 80px;
+    position:absolute;
+    top: 250px;
+    left: 45%;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    padding:10px 45px ;
+}
+
+#e{
+    width:220px ;
+    height:100px ;
+    position: absolute;
+    bottom: 220px;
+    left: 15%;
+    border: white 3px solid ;
+    font-size: 60px;
+    text-align: center;
+    background-color: black
+}
+
+#f{
+    background-color: white;
+    color: black;
+    position: absolute;
+    font-size: 35px ;
+    padding: 10px 30px;
+    display: inline-block;
+    bottom: 130px;
+    left: 16.8%;
+}
+
+#g{
+   position: absolute; 
+   bottom: 280px;
+   font-size: 30px;
+   left: 55%;
+}
+
+#h{
+    position: absolute; 
+    bottom: 180px;
+    font-size: 30px;
+    left: 55%;
+
+ }
+
+ #i{
+    position: absolute; 
+    bottom: 140px;
+    font-size: 30px;
+    left: 55%;
+ }
+
+#over{
+    text-align: center;
+    
+}
+
+#head{
+        color: white;
+     font-size: 80px;
+      position: relative;
+      text-align: center;
+      top: 240px;
+ }
+
+body{
+     background-color: black;
+ }
+
+#j{
+    color: tomato;
+    background-color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    position: relative;
+    top: 300px;
+    font-size: 35px ;
+    text-align: center;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body id="body">
+    <div id="game">
+        <p id="a">(Between 1 and 20)</p>
+        <p id="b">Again!</p>
+        <p id="c">Guess My Number!</p>
+        <div id="line"></div>
+        <p id="d">?</p>
+
+        <input id="e" name="userip" type="number" max="20">
+
+        <button id="f"s>Check!</button>
+
+        <p id="g">Start guessing...</p>
+        <p id="h">💯 Score: 20</p>
+        <p id="i">🥇 Highscore: 0</p>
+    </div>
+    <div id="over" style="display:none;">
+        <h1 id="head">Game Over!</h1>
+        <p id="j">Again!</p>
+    </div>
+    <script>
+        var r = Math.floor(Math.random() * 20 + 1);
+        console.log(r);
+        var score = 20
+        var inp
+        var highscore = 0
+
+        function check() {
+            inp = Number(document.getElementById("e").value);
+
+
+            if (document.getElementById("e").value == "") {
+                document.getElementById("g").innerHTML = "⛔️ No number!";
+
+            }
+
+            else if (inp > 20) {
+                alert("Please enter a number between zero to twenty")
+            }
+            else if (inp == r) {
+                console.log("correct output");
+                document.getElementById("body").style.backgroundColor = "#60b347";
+                document.getElementById("e").style.backgroundColor = "#60b347";
+                document.getElementById("d").innerHTML = r;
+                document.getElementById("d").style.padding = "10px 100px";
+                document.getElementById("g").innerHTML = "Correct Output 🎉";
+                console.log("hs", highscore, score);
+                if (highscore < score) {
+                    highscore = score;
+                    document.getElementById("i").innerHTML = "🥇 Highscore: " + highscore;
+                }
+                console.log("hs", highscore, score);
+
+            }
+            else if (inp > r) {
+                score--;
+                console.log(inp, r, inp > r)
+                document.getElementById("g").innerHTML = "Too high!";
+                document.getElementById("h").innerHTML = "💯 Score: " + score;
+
+            }
+
+            else {
+                score--;
+                console.log(inp, r, inp > r)
+
+                document.getElementById("g").innerHTML = "Too Low!";
+                document.getElementById("h").innerHTML = "💯 Score: " + score;
+
+            }
+            if (score <= 0) {
+                console.log("Game Over")
+                document.getElementById("game").style.display = "none";
+                document.getElementById("over").style.display = "block";
+                document.getElementById("body").style.backgroundColor = "tomato";
+            }
+        }
+        document.getElementById("f").onclick = function () { check() };
+
+        function gameover() {
+            r = Math.floor(Math.random() * 20 + 1);
+            document.getElementById("g").innerHTML = "Start guessing...";
+            document.getElementById("h").innerHTML = "💯 Score: 20";
+            document.getElementById("d").innerHTML = "?";
+            document.getElementById("e").value = null
+            document.getElementById("game").style.display = "block";
+            document.getElementById("over").style.display = "none";
+            document.getElementById("body").style.backgroundColor = "black";
+            document.getElementById("e").style.backgroundColor = "black";
+            score = 20
+        }
+        document.getElementById("j").onclick = function () { gameover() }
+        document.getElementById("b").onclick = function () { gameover() }
+        document.cookie="key1=value1;expires=date";
+        document.cookie="key2=value2;expires=date";
+        var newcookie = document.cookie
+        document.write("new cookies:"+ newcookie)
+    </script>
+</body>
+
+</html>
